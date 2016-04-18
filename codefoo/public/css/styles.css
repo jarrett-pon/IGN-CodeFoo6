@@ -1,0 +1,384 @@
+/**
+ * styles.css
+ *
+ * Computer Science 50
+ * Problem Set 7
+ *
+ * Global CSS.
+ */
+
+ body
+ {
+     background-color:#f0f1f2;
+ }
+
+.jumbotron
+{
+    background-color:gray;
+    padding-right: 20px;
+   padding-left: 20px;
+   padding-top: 10px;
+   padding-bottom: 15px;
+}
+
+.jumbotron p
+{
+    font-size: 16px;
+}
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    /* adust padding from bootstram */
+    padding: 0 15px 0 0;
+}
+
+#top
+{
+    /* surround with whitespace */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#top .nav
+{
+    /* center navigation pills */
+    display: inline-block;
+}
+
+#middle .form-control
+{
+    /* center form controls */
+    margin:auto;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+#bottom
+{
+    /* shrink bottom's font size */
+    font-size: smaller;
+
+    /* surround with whitespace */
+    margin: 20px;
+}
+
+/* css for scrabble */
+#scrabble .form-group, .form-control
+{
+    display:inline;
+}
+
+td
+{
+    text-align:left;
+}
+
+/* CSS primarily just for front_end */
+a:link, a:visited
+{
+    text-decoration: none;
+}
+
+/* viewport used here to make page more responsive for front-end problem */
+/* measurements in front-end problem measured in em */
+@media screen and (max-width: 1259px)
+{
+    .fe-container
+    {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1260px)
+{
+    .fe-container
+    {
+        font-size: 17px;
+    }
+}
+
+
+.fe-container
+{
+    width: 24em;
+    margin:auto;
+    counter-reset:item;
+    background-color:white;
+    border-radius:5px;
+}
+
+.fe-nav
+{
+
+    height: 2em;
+    line-height: 2em;
+    margin: .6em 0 .6em 1.5em;
+}
+
+.articles
+{
+    border-left: 1px solid #bf1313;
+    border-radius: 2em 0 0 2em;
+}
+
+.videos
+{
+    border-right: 1px solid #bf1313;
+    border-radius: 0 2em 2em 0;
+    margin: 0 0 0 -0.5em;
+}
+
+.articles, .videos
+{
+    border-bottom: 1px solid #bf1313;
+    border-top: 1px solid #bf1313;
+    color: #bf1313;
+    font-family: arial,sans-serif;
+    font-size: .76em;
+    font-weight: bold;
+    line-height: 1.9em;
+    padding: .5em 3.5em .5em;
+    position: relative;
+    text-transform: uppercase;
+
+}
+
+.articles:hover, .videos:hover
+{
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+.active, .active:hover
+{
+    background-color: #bf1313;
+    color: #fff;
+    text-decoration:none;
+    cursor:default;
+}
+
+.playlist-item
+{
+
+    background-position-x: 9000px;
+    background-position-y: 50%;
+    background-repeat:no-repeat;
+    background-size: 120%;
+    transition: background-size 0.3s;
+    border-bottom: 1px solid #ccc;
+    padding: .42em 1em .42em 0;
+    display:block;
+    position:relative;
+    line-height:.95em;
+}
+
+.playlist-item:hover
+{
+    background-size:150%;
+    background-position-x:50%;
+}
+.playlist-item:before
+{
+    content: counter(item,decimal-leading-zero);
+    counter-increment: item;
+    color:black;
+    border-bottom: 1px dotted white;
+    font-size: .76em;
+    height:4.28em;
+    left:0;
+    line-height: 3.5em;
+    position: absolute;
+    top: -8px;
+    width: 4em;
+    font-weight:700;
+}
+
+/* Height adjustment for playist-item:before so that the border bottom shows up */
+@media screen and (max-width: 1259px)
+{
+    .playlist-item:before
+    {
+        height:4.4em;
+    }
+}
+
+.details
+{
+    display:block;
+    padding-left:3em;
+    position:relative;
+    width: 23.2em;
+
+}
+.object, .title
+{
+    color:black;
+    display:block;
+    font-size: .76em;
+    font-weight: 700;
+    max-width: 23.5em;
+    text-align:left;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+}
+.playlist-item:hover:before, .playlist-item:hover .object
+{
+    color:white;
+}
+
+.title
+{
+    color: #8a8a8a;
+    font-weight:500;
+    max-width: 20.1em;
+}
+
+
+.duration
+{
+    font-size: .7em;
+    position: absolute;
+    text-align:right;
+    top:0;
+    right:0;
+    color:#8a8a8a;
+    font-weight:700;
+}
+
+#more
+{
+    display:block;
+    font-size:0.6em;
+    font-weight:bold;
+    color:#8a8a8a;
+    text-align:left;
+    margin-left:5em;
+    padding-bottom:1em;
+    cursor: pointer;
+}
+
+.no-border
+{
+    border:none;
+}
+
+/* end of styles for front end */
+
+/*styles for bonus (phaser game) */
+
+canvas{
+    margin:auto;
+}
+/* end of styles for phaser game */
+
+/*Styles for bonus (poker game) */
+#poker
+{
+    width:1200px;
+}
+
+#poker [class*="col-"]
+{
+   height: 240px;
+}
+
+#poker img
+{
+    padding-top:11px;
+}
+
+#poker button
+{
+    margin-top:15px;
+    width:100px;
+    height:40px;
+}
+
+#poker #bet
+{
+    margin-top:80px;
+    height: 60px;
+    width:105px;
+}
+#poker-table
+{
+
+     background-image: url("../img/cards/table-background.png");
+     margin-bottom:10px;
+}
+#poker-response
+{
+    background:black;
+    color:white;
+    width: 354px;
+    height:200px;
+    margin-top:15px;
+    border: 1px solid white;
+    border-radius:1px;
+    text-align:left;
+}
+
+#poker-response p
+{
+    padding:5px 9px;
+}
+
+.cash
+{
+    background:black;
+    color:white;
+    border: 1px solid white;
+    border-radius:1px;
+    display:inline-block;
+
+    margin:30px 5px 0px;
+    padding:10px;
+}
+
+.cash p
+{
+    margin: 0;
+}
+
+/* End styles for poker game */
+
+/*Beginning styles for back end */
+
+#middle .textarea
+{
+    /*Set the width back to 100% */
+    width: 100%;
+}
+
+/* End of styles for back end */
+
+/*Beginning styles for Lego page */
+
+.lego
+{
+    background-color:white;
+    font-size: 16px;
+    text-align:left;
+    font-family: Georgia, Times, serif;
+    padding: 2em;
+}
+.lego img
+{
+    display:block;
+    max-width:100%;
+    max-height:100%;
+    margin:auto;
+}
+
+.lego hr
+{
+        border-top: 1px solid black;
+        margin: 30px 0 30px;
+}
