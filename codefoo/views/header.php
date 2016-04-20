@@ -38,7 +38,8 @@
                         <li><a href="index.php" >Introduction</a></li>
                         <li><a href="lego.php">Legos</a></li>
                         <li><a href="scrabble.php">Scrabble&trade;</a></li>
-                        <li><a href="back_end.php">Back End</a></li>
+                        <li><a href="back_end.php">QWERTY</a></li>
+                        <li><a href="date.php">ISO 8601</a><li>
                         <li><a href="front_end.php">Front End</a></li>
                         <li><a href="bonus.php">Bonus</a></li>
                     </ul>
