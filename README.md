@@ -34,6 +34,10 @@ The last part is programming the AI. I could make the AI cheat and have it fold 
 #Lego 
 Most of the Lego problem is explained on the page. Basically I found the biggest Lego pieces for each part of the bridge. Then found the volume of the bridge and determine the pieces needed. Some parts I account for negative space.
 
-#Backend
+#Backend - QWERTY
 
 At this point I have finished part A of the backend. All the program does is take the input and has a case:switch that outputs a QWERTY key from the AZERTY keyboard position. I tackled the sticky h key and some keys that can't be made on AZERTY keyboard by my own "escape character" of +. I choose + because it is in the same spot on both keyboards.
+
+#Backend - ISO 8601
+
+For this program I decided to use regex. Even though I've been exposed to regex, I am not too familiar with using it. I still used regex so I could get practice on it and because it seemed like a simpler way to parse the date strings. Originally I was going to use regex on each individual scenario on the list of date strings given by IGN. However this seemed very inefficient, so I parsed by similar patterns and assigned the pattern values corresponding to the part of the date. At the end I would put the ISO 8601 string together with what I could parse out.
