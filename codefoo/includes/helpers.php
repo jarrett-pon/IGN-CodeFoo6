@@ -1,4 +1,10 @@
 <?php
+    /**
+     * helpers.php
+     *
+
+     * Helper functions.
+     */
     require_once("config.php");
 
     /**
