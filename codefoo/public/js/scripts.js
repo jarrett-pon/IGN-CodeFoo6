@@ -1,9 +1,6 @@
 /**
  * scripts.js
  *
- * Computer Science 50
- * Problem Set 7
- *
  * Global JavaScript, if any.
  */
 
@@ -776,7 +773,7 @@ $(document).ready(function(){
         //Things get complicated on a tie...
         else
         {
-            //If we find an ace, going to change it to 14, since the round is over, changing the values won't matter
+            //If we find an ace, going to change it to 14, this will change the value in deck, at end of findwinner() we will change it back...
             if( playercard1[0] == 1)
             {
                 playercard1[0] = 14;
@@ -827,6 +824,9 @@ $(document).ready(function(){
             else if ( playerhand > 40000)
             {
                 $('#poker-response p').append("You tied this hand! (No high card in this case) ");
+                opppoints += (pool/2);
+                playerpoints += (pool/2);
+                pool = 0;
             }
             //In any of these situations high card can be determined by what card we don't have
             //We know what card we don't have because the last two numbers of point number tells us what
@@ -866,6 +866,24 @@ $(document).ready(function(){
                 playerpoints += (pool/2);
                 pool = 0;
             }
+            //since js passes values by reference, need to change aces back to 1 if any were changed to 14
+            if( playercard1[0] == 14)
+            {
+                playercard1[0] = 1;
+            }
+            if( playercard2[0] == 14)
+            {
+                playercard2[0] = 1;
+            }
+            if( oppcard1[0] == 14)
+            {
+                oppcard1[0] = 1;
+            }
+            if( oppcard2[0] == 14)
+            {
+                oppcard2[0] = 1;
+            }
+
         }
 
         //update point totals
@@ -1772,6 +1790,7 @@ $(document).ready(function(){
         //Initialize Round
         if ( bet == true )
         {
+
             //Empty the poke table
             $('#player-card-1').empty();
             $('#player-card-2').empty();
@@ -1984,7 +2003,7 @@ $(document).ready(function(){
                 }
                 else if ( stage == 1)
                 {
-                    $('#poker-response p').text("The opponent has also checked. So far you have bet: Here is the turn. You can now raise, check, or go all-in.");
+                    $('#poker-response p').text("The opponent has also checked. Here is the turn. You can now raise, check, or go all-in.");
                     $('#card-4').empty();
                     $('#card-4').append("<img src='" + findcardimg(card4) + "' alt='Playing card'>");
                     stage = 2;
@@ -2009,6 +2028,12 @@ $(document).ready(function(){
             {
                 $('#poker-response p').text("The opponent has raised your check. Per the rules, you cannot re-raise. You can now check, go all-in or fold.");
                 raise = false;
+            }
+            else if(response =="allin")
+            {
+                $('#poker-response p').text("The opponent has gone all in, you can call or fold.");
+                raise = false;
+                allin = false;
             }
         }
         //Player checked on a raise by opponenet (only one re-raise allowed and that is by the oppenent)
@@ -2151,14 +2176,3 @@ $(document).ready(function(){
         }
     });
 });
-/*
-$(document).ready(function(){
-    $('.articles').click(function(event){
-        var url = 'http://ign-apis.herokuapp.com/articles?' + $('#symbol').val();
-        $.getJSON(url, function(data){
-        $('#price').html(data.price);
-        });
-        event.preventDefault();
-    });
-});
-*/
