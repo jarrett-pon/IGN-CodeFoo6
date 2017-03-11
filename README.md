@@ -1,5 +1,7 @@
 # IGN-CodeFoo
-Hello my name is Jarrett Pon and this is my application to IGN's Code Foo 6. My application can also be viewed at http://www.jarrettpon.com/codefoo/public/ Below is my bio and additional explanations to the problems I completed for Code Foo.
+Hello my name is Jarrett Pon and this is my application to IGN's Code Foo 6. Below is my bio and additional explanations to the problems I completed for Code Foo.
+
+Update: This was an application to IGN Code Foo 6 submitted around April 2016. Based on this submission, I was one of six candidates out of 50+ applicants choosen to take part in IGN's Code Foo internship program. This project is not reflective of my best work and current ability however I like to keep one of my original projects.
 
 # Bio
 To supplement my video, I will extend my bio. I graduated May 2015 with a B.S. in chemical engineering at University of Missouri. Since graduating I have decided to pursue a career in tech industry. Even though my degree is in ChemE, I have always had interest in coding and computer science. On two occasions I seriously contemplated switching my degree to computer science but ended up sticking to my original degree. However during my time at college, I did study C and take a Matlab course. With Matlab, I created a vapor equilibrium calculator for specific three component systems in Matlab with a GUI. In addition, I have experience with working in teams, exposed me to project management skills, and presenting information. 
