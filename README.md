@@ -33,13 +33,13 @@ Initially, I had the AI return a check/call every time and coded what would happ
 
 The last part is programming the AI. I could make the AI cheat and have it fold when it knows it’s going to lose from the beginning or raise/go all in/call when it knows it’s going to win. Of course that would be no fun, so the AI responds to only the cards it knows about, just like the player. The fun thing about the AI is that it is not predictable. I use a random number generator that gives a number from 1-100. Each decision the AI makes is by probability but not by certainty. Just because it has a "bad" or "good" hand it will be more likely to make a certain decision but it could still make a "bad" decision or have what I like to call a bluff chance. I created a separate point system for the initial two cards which evaluates the first two cards. The higher the points the better the first two cards. After the first three cards are shown, I just use the normal 5 card point system to make decisions. From here, the AI makes decisions based on chance which the chances are determined by what the AI has. The probability also change in between the stages for the same points because the cards are not all determined in the beginning. 
 
-#Lego 
+# Lego 
 Most of the Lego problem is explained on the page. Basically I found the biggest Lego pieces for each part of the bridge. Then found the volume of the bridge and determine the pieces needed. Some parts I account for negative space.
 
-#Backend - QWERTY
+# Backend - QWERTY
 
 At this point I have finished part A of the backend. All the program does is take the input and has a case:switch that outputs a QWERTY key from the AZERTY keyboard position. I tackled the sticky h key and some keys that can't be made on AZERTY keyboard by my own "escape character" of +. I choose + because it is in the same spot on both keyboards.
 
-#Backend - ISO 8601
+# Backend - ISO 8601
 
 For this program I decided to use regex. Even though I've been exposed to regex, I am not too familiar with using it. I still used regex so I could get practice on it and because it seemed like a simpler way to parse the date strings. Originally I was going to use regex on each individual scenario on the list of date strings given by IGN. However this seemed very inefficient, so I parsed by similar patterns and assigned the pattern values corresponding to the part of the date. At the end I would put the ISO 8601 string together with what I could parse out.
